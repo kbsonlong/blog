@@ -1,0 +1,11 @@
+backports.ssl-match-hostname==3.4.0.2
+bootstrap-admin==0.3.7.1
+chardet==2.2.1
+Django==1.8.18
+iniparse==0.4
+kitchen==1.1.1
+Markdown==2.6.8
+meld3==1.0.2
+pytz==2017.3
+supervisor==3.3.1
+virtualenv==15.1.0
