@@ -12,3 +12,25 @@ python manage.py makemigrations
 
 python manage.py migrate
 
+# 1.4、创建后台管理员
+
+    # python manage.py createsuperuser
+    Username (leave blank to use 'root'): admin
+    Email address: kbsonlong@gmail.com
+    Password:
+    Password (again):
+    Superuser created successfully.
+
+# 1.5、安装并配置uwsgi
+
+pip install uwsgi
+
+# 1.6、 配置nginx
+
+
+# 1.7、启动uwsgi和nginx
+
+uwsgi --ini config/uwsgi.ini
+
+/etc/init.d/nginx start
+
