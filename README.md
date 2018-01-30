@@ -1,6 +1,6 @@
 # 1.1、下载源码
 
-git clone https://github.com/kbsonlong/SaltRuler.git
+git clone https://github.com/kbsonlong/blog.git
 
 # 1.2、安装依赖
 
