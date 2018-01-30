@@ -71,40 +71,22 @@ def blog_search(request):
 
 
 class RSSFeed(Feed) :
-    # title = "RSS feed - article"
-    # link = "feeds/posts/"
-    # description = "RSS feed - blog posts"
-    #
-    # def items(self):
-    #     return Article.objects.order_by('-date_time')
-    #
-    # def item_title(self, item):
-    #     return item.title
-    #
-    # def item_pubdate(self, item):
-    #     return item.date_time
-    #
-    # def item_description(self, item):
-    #     return item.content
-
-    # 订阅标题
-    title = u"许刚的博客的更新"
-    link = "/feeds/posts/"
-    # 描述
+    title = u"小蜗牛的博客的更新"
+    link = "feeds/posts/"
     description = "关注小蜗牛的最新动态"
 
-    # 订阅的数据
     def items(self):
         return Article.objects.order_by('-date_time')
-        # 订阅的标题
 
     def item_title(self, item):
         return item.title
-        # 订阅的表示
+
+    def item_pubdate(self, item):
+        return item.date_time
 
     def item_description(self, item):
-        return item.abstract
-        # 每条订阅的链接
+        return item.content
 
+    #     # 每条订阅的链接
     def item_link(self, item):
-        return "http://www.along.party:8080/" + str(item.id) + "/"
+        return  "/" +str(item.id) + "/"
