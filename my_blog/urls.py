@@ -13,19 +13,21 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+from django.conf.urls import url,include
 from django.contrib import admin
 from article import views as article_views
+# from article.urls import router as blog_router
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', article_views.home),
-url(r'^(?P<id>\d+)/$', article_views.detail, name='detail'),
-url(r'^test/$', article_views.test),
-url(r'^archives/$', article_views.archives, name = 'archives'),
-url(r'^aboutme/$', article_views.about_me, name = 'about_me'),
-url(r'^tag(?P<tag>\w+)/$', article_views.search_tag, name = 'search_tag'),
-url(r'^search/$', article_views.blog_search, name = 'search'),
-url(r'^feed/$', article_views.RSSFeed(), name = "RSS"),
+    url(r'^(?P<id>\d+)/$', article_views.detail, name='detail'),
+    url(r'^test/$', article_views.test),
+    url(r'^archives/$', article_views.archives, name = 'archives'),
+    url(r'^aboutme/$', article_views.about_me, name = 'about_me'),
+    url(r'^tag(?P<tag>\w+)/$', article_views.search_tag, name = 'search_tag'),
+    url(r'^search/$', article_views.blog_search, name = 'search'),
+    url(r'^feed/$', article_views.RSSFeed(), name = "RSS"),
+
 ]

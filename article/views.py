@@ -90,3 +90,5 @@ class RSSFeed(Feed) :
     #     # 每条订阅的链接
     def item_link(self, item):
         return  "/" +str(item.id) + "/"
+
+
