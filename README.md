@@ -21,11 +21,11 @@ python manage.py migrate
     Password (again):
     Superuser created successfully.
 
-# 1.5、安装并配置uwsgi
+# 1.5、安装并[配置uwsgi](/config/uwsgi.ini)
 
 pip install uwsgi
 
-# 1.6、 配置nginx
+# 1.6、 [配置nginx](/config/nginx.conf)
 
 
 # 1.7、启动uwsgi和nginx
